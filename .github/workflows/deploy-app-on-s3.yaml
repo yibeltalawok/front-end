@@ -1,0 +1,21 @@
+name: deploy-front-app
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+    
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@master
+    - run: npm i
+    # - run: pm2 restart Astra-ERP-Front
