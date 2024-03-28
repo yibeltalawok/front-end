@@ -102,9 +102,9 @@ export default {
           tempd.push(iterator.department)
         }
       }
-      console.log(employee)
-      console.log(subDept)
-      console.log(departments)
+      // console.log(employee)
+      // console.log(subDept)
+      // console.log(departments)
       let items = { employee: employee, sudDept: subDept, dept: departments }
       commit('setSelectItems', items)
     },

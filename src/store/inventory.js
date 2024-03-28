@@ -208,14 +208,14 @@ export default {
       for (let i = 0; i < itemnums.length; i++) {
         nums.push(itemnums[i].itemNumber)
       }
-      console.log('================= Item nums ===========')
-      console.log(itemnums)
+      // console.log('================= Item nums ===========')
+      // console.log(itemnums)
       commit('setItemNumber', nums)
     },
     async fetchCurrentInventoryData({ commit }, data) {
       let filter = { where: { id: data } }
       await api.all(path.inventory, filter).then((res) => {
-        console.log(res.rows)
+        // console.log(res.rows)
         commit('setCurrentInventoryData', res.rows)
       })
     },
@@ -656,7 +656,7 @@ export default {
       // {
       //     issue = issue.rows
 
-      console.log(item[0])
+      // console.log(item[0])
       let filter =
         item[1] == 'state'
           ? {
@@ -674,7 +674,7 @@ export default {
       let issue = {}
       await api.all(path.issue, filter).then((issueState) => {
         issue = issueState['rows']
-        console.log(issue)
+        // console.log(issue)
       })
       commit('setIssueFilter', issue)
     },
