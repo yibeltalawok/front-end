@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>logo.svg">
+    <title>Poshak-Consultansy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+ 
+ 
+  <style type="text/css" media="print">
+  
+  
+body {
+  margin: 0;
+}
+
+div.page {
+  margin: 10px auto;
+  border: solid 1px black;
+  display: inline;
+  page-break-after: always;
+  overflow: hidden;
+  background: white;
+}
+
+div.landscape-parent {
+  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-rl;
+  /* transform: rotate(-90deg); */
+  width: 230mm;
+  height: 350mm;
+}
+
+div.landscape {
+   /* transform: rotate(-90deg); */
+   width: 230mm;
+  height: 350mm;
+}
+div.content {
+  padding: 10mm;
+}
+
+body,
+div,
+td {
+  font-size: 13px;
+  font-family: Verdana;
+}
+   </style>
+
+  </head>
+  <script src="/node_modules/rive-canvas/rive.js"></script>
+  <body>
+    <noscript>
+      <strong>We're sorry but et-analytica doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

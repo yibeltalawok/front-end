@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+div.page {
+  margin: 10px auto;
+  border: solid 1px black;
+  display: block;
+  page-break-after: always;
+  width: 209mm;
+  height: 296mm;
+  overflow: hidden;
+  background: white;
+}
+
+div.landscape-parent {
+  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-rl;
+  transform: rotate(180deg);
+  width: 316mm;
+  height: 229mm;
+}
+
+div.landscape {
+  transform: rotate(-90deg);
+  width: 316mm;
+  height: 229mm;
+}
+div.content {
+  padding: 10mm;
+}
+
+body,
+div,
+td {
+  font-size: 13px;
+  font-family: Verdana;
+}
