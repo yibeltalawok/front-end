@@ -19,8 +19,7 @@
                 name: 'employee-detail',
                 params: { employeeId: employeeId }
               })
-            "
-          >
+            ">
             <v-icon class="mx-3">mdi-chevron-left</v-icon>
             {{ $t("go_back") }}
           </v-btn>

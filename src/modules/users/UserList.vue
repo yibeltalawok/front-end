@@ -14,7 +14,7 @@
               rounded
               v-model="search"
               :label="$t('search-user')"
-            />
+             />
           </div>
           <v-spacer></v-spacer>
           <v-btn
@@ -22,8 +22,8 @@
             small
             class="text-capitalize primary"
             @click="$router.push({ name: 'user-create' })"
-            >{{ $t("addNew") }}</v-btn
-          >
+            >{{ $t("addNew") }}
+            </v-btn>
           <v-btn icon @click="downloadDataAsCsv('opmsEmployeeList')">
             <downloadicon />
           </v-btn>
@@ -41,9 +41,7 @@
           footer-props.items-per-page-text="`${$t('users')} per page`"
         >
           <template slot="headerCell" slot-scope="props">
-            <span class="table-header-text caption font-weight-bold">{{
-              $t(props.header.text)
-            }}</span>
+           <span class="table-header-text caption font-weight-bold">{{$t(props.header.text)}}</span>
           </template>
           <template v-slot:item.action="{ item }">
             <v-btn
@@ -54,9 +52,8 @@
                 $router.push({
                   name: 'user-update',
                   params: { userId: item.id },
-                })
-              "
-            >
+                })"
+               >
               <v-icon class="mr-2">edit</v-icon>
             </v-btn>
             <v-btn small text color="red" @click="deleteItem(item.id, path)">
@@ -68,9 +65,6 @@
     </v-container>
   </div>
 </template>
-
-
-
 <script>
 import { api, path } from "@/api";
 import { tableMixin, csvDownloadMixin } from "@/shared/mixins";

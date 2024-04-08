@@ -2,7 +2,6 @@
   <v-navigation-drawer
     v-model="drawerStatus"
     app
-    clipped
     :mini-variant.sync="mini"
     fixed
     width="260px"
@@ -11,7 +10,7 @@
   >
     <div class="profileContainer">
       <!-- <img class="profilePicture" src="@/assets/tesfa.jpg" @click="$refs.myprofile.click()"/> -->
-      <v-img src="@/assets/me.jpg" class="profilePicture" id="rounded-card">
+      <v-img src="@/assets/prifile.jpeg" class="profilePicture" id="rounded-card">
         <v-btn
           :ripple="false"
           icon
@@ -31,7 +30,7 @@
     </div>
 
     <v-divider />
-    <perfect-scrollbar style="display: hidden">
+    <perfect-scrollbar class="downSidebar" style="display: hidden;height:570px;">
       <!-- <v-list-item @click="$router.push({ name: 'dashboard' })">
               
                 <v-icon style="margin-right: 10px" small>home</v-icon>
@@ -39,8 +38,10 @@
                 <v-list-item-subtitle>{{ $t("dashboard") }}</v-list-item-subtitle>
               </v-list-item-content>
          </v-list-item> -->
-
-      <v-list-item @click="$router.push({ name: 'companyDashboard' })">
+                                                                                                         <!-- Yibeltal comment -->
+      <!-- 
+        
+        <v-list-item @click="$router.push({ name: 'companyDashboard' })">                                     
         <icon
           name="companyDashboard"
           style="width: 20%; margin-left: -15px"
@@ -50,7 +51,7 @@
             $t("companyDashboard")
           }}</v-list-item-subtitle>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
 
       <v-list-item @click="$router.push({ name: 'employeedashboard' })">
         <icon
@@ -63,17 +64,17 @@
           }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-
-      <v-list-item @click="$router.push({ name: 'qualitydashboard' })">
+                                                                                                         <!-- Yibeltal comment -->
+      <!-- <v-list-item @click="$router.push({ name: 'qualitydashboard' })">
         <icon name="quality" style="width: 20%; margin-left: -15px"></icon>
         <v-list-item-content>
           <v-list-item-subtitle>{{
             $t("Quality DashBoard")
           }}</v-list-item-subtitle>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> 
 
-      <v-list-item @click="$router.push({ name: 'simulation' })">
+       <v-list-item @click="$router.push({ name: 'simulation' })">
         <icon
           name="simulation"
           style="width: 20%; margin-left: -15px"
@@ -83,7 +84,7 @@
             $t("simulation")
           }}</v-list-item-subtitle>
         </v-list-item-content>
-      </v-list-item>
+      </v-list-item> -->
 
       <v-list link dense>
         <v-expansion-panels style="padding-right: 8px" flat>
@@ -126,7 +127,7 @@
 <script>
 import AccountService from "@/shared/services";
 import { mapState, mapMutations } from "vuex";
-import { menusData } from "@/modules/menuData";
+import { menusData } from "@/modules/linkData";
 import icon from "./Icon";
 
 export default {
@@ -171,12 +172,21 @@ export default {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+.navdrawer{
+    background-color: rgb(99, 100, 102);
+   color: rgb(233, 227, 227);
 
+}
 .profileContainer {
   height: 10vh;
-  display: flex;
+  display: flex; 
+    background-color: rgb(33, 33, 34);
+   color: rgb(233, 227, 227);
 }
-
+.downSidebar{
+    background-color: rgb(99, 100, 102);
+   color: #e9e3e3;
+}
 .profilePicture {
   width: 8vh;
   height: 8vh;

@@ -1,9 +1,7 @@
 import { api, path } from "@/api";
 import Router from "@/router";
 export const ACCESS_TOKEN_KEY = "token";
-
 export const PROFILE_KEY = "profile";
-
 const AccountService = {
   login(email, password) {
     return api

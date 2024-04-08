@@ -94,7 +94,7 @@
     </v-container>
 
     <!-- modal dialog -->
-    <v-dialog v-model="dialog" max-width="500px">
+   <v-dialog v-model="dialog" max-width="500px">
       <v-card>
         <v-toolbar dark dense flat height="35px" color="primary">
           Create New role
@@ -103,7 +103,7 @@
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </v-toolbar>
-        <app-role @close="close" />
+        <app-role />
       </v-card>
     </v-dialog>
     <!-- modal dialog -->
@@ -138,7 +138,7 @@ export default {
     };
   },
   components: {
-    AppRole
+   AppRole
   },
   async created() {
     const { userId } = this.$route.params;
@@ -165,6 +165,8 @@ export default {
       this.roles = (await api.all(this.pathRole, filter)).rows;
     },
     save() {
+  // eslint-disable-next-line no-console
+    console.log("items=",this.roles)
       this.$validator.validateAll().then(valid => {
         if (valid) {
           delete this.item.confirmPassword;

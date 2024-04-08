@@ -24,7 +24,6 @@
             @click="createNewCustomer()"
             >{{ $t("addNew") }}
             </v-btn>
- 
         </v-toolbar>
         <v-divider />
         <v-data-table

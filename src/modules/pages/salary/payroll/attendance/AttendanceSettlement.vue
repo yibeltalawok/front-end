@@ -89,7 +89,6 @@
     </v-dialog>
   </div>
 </template>
-
 <script>
 import nodata from "@/assets/icons/nodata_icon.svg";
 import { mapState, mapActions } from "vuex";
@@ -163,7 +162,7 @@ export default {
         }],
         where: {
           dateAttended: {
-            between: ["2021-02-03", "2021-02-27"],
+            between: ["2024-04-03", "2024-04-27"],
           },
           value: "",
         },
@@ -222,17 +221,15 @@ export default {
 
     async departmentSelected() {
       if (this.fdept != null && this.fdept != "")
-        this.initialfilter.include[0].scope.where.department = this.fdept;
+        this.initialfilter.include[0].scope.where.department = this.fdept;  //Or you can use "{ like: this.fdept }" 
       else delete this.initialfilter.include[0].scope.where.department
       if (this.fname != null)
         this.initialfilter.include[0].scope.where.fullName = { like: this.fname };
       else delete this.initialfilter.include[0].scope.where.fullName
-      
+
       if (this.fsubdepartment != null)
         this.initialfilter.include[0].scope.where.subDept = { like: this.fsubdepartment };
       else delete this.initialfilter.include[0].scope.where.subDept
-
-
       this.update();
     },
 

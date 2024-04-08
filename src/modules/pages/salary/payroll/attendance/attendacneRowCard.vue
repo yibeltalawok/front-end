@@ -35,7 +35,7 @@
         </div>
 
         <div class="rowcon">
-          {{ card.dateAttended | date }}
+          {{  card.dateAttended | date }}
         </div>
 
         <div class="rowcon">{{ card.lateMinutes }} mins late</div>
@@ -51,9 +51,7 @@
         >
           {{ card.value }}
         </div>
-
       </div>
-
       </div>
     </div>
   </div>

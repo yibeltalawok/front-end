@@ -247,6 +247,9 @@ export default {
           delete this.item.confirmPassword;
           this.item.userRoleId = this.selectedRole;
           this.errorMessage = null;
+              // eslint-disable-next-line no-console
+             console.log(`this.item==`,this.item)
+
           api
             .create(this.item, path.user)
             .then(() => {

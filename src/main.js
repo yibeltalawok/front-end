@@ -56,10 +56,8 @@ import 'vuelayers/lib/style.css' // needs css-loader
 Vue.use(VueLayers)
 // ''=====================================
 
-
 //html to paper table printer
 import VueHtmlToPaper from "vue-html-to-paper";
-
 const options = {
   name: "_blank",
   specs: ["fullscreen=yes", "titlebar=yes", "scrollbars=yes"],

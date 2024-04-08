@@ -27,7 +27,6 @@
     </v-card>
   </v-form>
 </template>
-
 <script>
 import { api, path } from "@/api/";
 export default {
@@ -66,6 +65,5 @@ export default {
   },
 };
 </script>
-
 <style>
 </style>

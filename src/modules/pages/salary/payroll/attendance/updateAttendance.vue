@@ -1,49 +1,44 @@
 <template>
 <div>
-<div class="mainwindow">
- 
-
+ <div class="mainwindow">
   <div class="closebtn"  @click="closebtnclicked">
         X 
   </div>
-
-  
    <div class="maincard">
-      <div class="fullname">{{edit.fullName}}</div>
-      <div class="department">{{edit.dateAttended | date}}</div>
-     <div class="autocomplete">
-         <v-autocomplete
-            style="width: 200px; "
-            v-model="edit.value"
-            :items="values"
-             item-text="name"
-             item-value="value"
-            hint="choose value"
-            persistent-hint
-            @change="valueSelected"
-          />
-      </div>
+    <div class="fullname">{{edit.fullName}}</div>
+    <div class="department">{{edit.dateAttended | date}}</div>
+    <div class="autocomplete">
+      <v-autocomplete
+        style="width: 200px; "
+        v-model="edit.value"
+        :items="values"
+        item-text="name"
+        item-value="value"
+        hint="choose value"
+        persistent-hint
+        @change="valueSelected"
+      />
+    </div>
+    <v-text-field
+     :label="$t('Late time')"
+     v-model="edit.lateMinutes"
+     :rules="inputRules"
+     outlined
+     dense
+    />
+   </div>
   </div>
-
-  
-
-</div>
-
- 
-
-</div>
+ </div>
 </template>
-
 <script>
 import {mapActions} from "vuex";
-
 export default {
     name: "updateAttendance",
     props: ["edit"],
     data () {
       return {
         values: [
-          { name: "Present", value: "P" },
+        { name: "Present", value: "P" },
         { name: "Absent", value: "A" },
         { name: "Permision", value: "Pr" },
         { name: "Anual Live", value: "AL" },
@@ -70,7 +65,7 @@ export default {
       },
       valueSelected(){
         // eslint-disable-next-line no-console
-        console.log(this.edit)
+        // console.log(this.edit)
         this.updateAttendance(this.edit).then(res => {
           res
              this.$notify({
@@ -99,7 +94,6 @@ export default {
 </script>
 
 <style scoped>
-
 .maincard {
   display: flex;
   flex-direction: column;

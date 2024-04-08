@@ -28,16 +28,13 @@ export default {
     },
 
     actions: {
-
         async fetchAttendance({commit} , flt){ 
-            
             flt = JSON.parse(JSON.stringify(flt));
             delete flt.where.value
-            console.log(flt)
-            
+            // console.log("yibe filter==",flt)
               await api.all(path.attendance, flt).then( res => {
                   commit("setAtendanceList", res.rows)
-                  console.log( res.rows)
+                //   console.log("yibe res.rows==", res.rows)
               })
         },
 
@@ -68,7 +65,6 @@ export default {
                 commit("setNumberOfReasons", total)
             })
         },
-
         async fetchNumberOfPresents({commit} , filter){ 
             filter.where.value = "P"           
             await api.all(path.attendance, filter).then( res => {

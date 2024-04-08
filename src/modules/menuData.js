@@ -1,35 +1,37 @@
 const menusData = [
-    {
-        title: "cop",
-        allowedRoles: ["admin", "cutting-department"],
-        links: [
-            {
-                title: "order",
-                route: "order",
-                icon: "order",
-                allowedRoles: ["admin", "cutting-department"],
-            },
-        ]
-    },
-    {
-        title: "cutting-room-module",
-        allowedRoles: ["admin", "cutting-department"],
-        links: [
+    //                                                                     //Ordering              //yibeltal comment
+    // {
+    //     title: "cop",
+    //     allowedRoles: ["admin", "cutting-department"],
+    //     links: [
+    //         {
+    //             title: "order",
+    //             route: "order",
+    //             icon: "order",
+    //             allowedRoles: ["admin", "cutting-department"],
+    //         },
+    //     ]
+    // },
+    //                                                                            //cutting room            //yibeltal
+    // {
+    //     title: "cutting-room-module",
+    //     allowedRoles: ["admin", "cutting-department"],
+    //     links: [
 
-            {
-                title: "laysheet",
-                route: "laysheet-list",
-                icon: "laysheet",
-                allowedRoles: ["admin", "cutting-department"],
-            },
-            {
-                title: "bundles",
-                route: "bundles-list",
-                icon: "bundles",
-                allowedRoles: ["admin", "cutting-department"],
-            },
-        ],
-    },
+    //         {
+    //             title: "laysheet",
+    //             route: "laysheet-list",
+    //             icon: "laysheet",
+    //             allowedRoles: ["admin", "cutting-department"],
+    //         },
+    //         {
+    //             title: "bundles",
+    //             route: "bundles-list",
+    //             icon: "bundles",
+    //             allowedRoles: ["admin", "cutting-department"],
+    //         },
+    //     ],
+    // },
 
     // quality
     {
@@ -138,32 +140,35 @@ const menusData = [
 
     //     ],
     // },
+//                                                                          //yibeltal comment
+    // {
+    //     title: "ob",
+    //     allowedRoles: ["admin"],
+    //     links: [
+    //         {
+    //             title: "ob",
+    //             route: "ob",
+    //             icon: "ob",
+    //             allowedRoles: ["admin"],
+    //         },
 
-    {
-        title: "ob",
-        allowedRoles: ["admin"],
-        links: [
-            {
-                title: "ob",
-                route: "ob",
-                icon: "ob",
-                allowedRoles: ["admin"],
-            },
+    //         {
+    //             title: "machineDB",
+    //             route: "machine",
+    //             icon: "machineDB",
+    //             allowedRoles: ["admin"],
+    //         },
+    //         {
+    //             title: "lost_time1",
+    //             route: "lost-time",
+    //             icon: "lost_time1",
+    //             allowedRoles: ["admin"],
+    //         },
+    //     ],
+    // },
 
-            {
-                title: "machineDB",
-                route: "machine",
-                icon: "machineDB",
-                allowedRoles: ["admin"],
-            },
-            {
-                title: "lost_time1",
-                route: "lost-time",
-                icon: "lost_time1",
-                allowedRoles: ["admin"],
-            },
-        ],
-    },
+
+    //                                                                  // not my comment
     // {
     //     title: "packing",
     //     allowedRoles: ["admin"],
@@ -232,7 +237,7 @@ const menusData = [
         ],
     },
     {
-        title: "authentication",
+        title: "user",
         allowedRoles: ["admin"],
         links: [
             {
@@ -243,25 +248,26 @@ const menusData = [
             }
         ],
     },
-    {
-        title: "file",
-        allowedRoles: ["admin"],
-        links: [
-            {
-                title: "template",
-                route: "template",
-                icon: "template",
-                allowedRoles: ["admin"],
-            },
+    //                                                                          //yibeltal comment
+    // {
+    //     title: "file",
+    //     allowedRoles: ["admin"],
+    //     links: [
+    //         {
+    //             title: "template",
+    //             route: "template",
+    //             icon: "template",
+    //             allowedRoles: ["admin"],
+    //         },
 
-            {
-                title: "json",
-                route: "json",
-                icon: "json",
-                allowedRoles: ["admin"],
-            },
-        ],
-    },
+    //         {
+    //             title: "json",
+    //             route: "json",
+    //             icon: "json",
+    //             allowedRoles: ["admin"],
+    //         },
+    //     ],
+    // },
 
 ]
 export { menusData }

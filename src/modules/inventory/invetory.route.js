@@ -39,11 +39,11 @@ export default [
                 name: "customer-list",
                 component: () => import('./customer/CustomerList')
             },
-            {
-                path: "customer/list",
-                name: "customer-list",
-                component: () => import('./customer/CustomerList')
-            },
+            // {
+            //     path: "customer/list",
+            //     name: "customer-list",
+            //     component: () => import('./customer/CustomerList')
+            // },
             {
                 path: "create/customer",
                 name: "create-customer",

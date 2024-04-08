@@ -146,14 +146,6 @@
           />
         </v-card>
       </v-fab-transition>
-              <v-btn
-              outlined
-              small
-              color="amber"
-              @click.stop="viewFetchAllEmployees()"
-            >
-          List
-            </v-btn>
     </v-container>
   </div>
 </template>

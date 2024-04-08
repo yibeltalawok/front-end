@@ -4,8 +4,6 @@
 
 import { api, path } from "@/api";
 import { rest } from "lodash";
-
-
 export default {
   namespaced: true,
   state: {

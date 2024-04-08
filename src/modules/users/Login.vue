@@ -10,7 +10,7 @@
           <v-flex xs12 pa-1>
             <v-row>
               <v-spacer />
-              <img src="@/assets/astralogo.png" width="20%" alt="alt" />
+              <img src="@/assets/abesha.png" width="20%" alt="alt" />
               <v-spacer />
             </v-row>
           </v-flex>

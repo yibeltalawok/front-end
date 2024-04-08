@@ -2,42 +2,42 @@
   <div class="mainclass">
     <v-layout style="margin: 10px; display: flex" justify-space-around>
       <div class="smallCard" style="width: 190px">
+       <div class="trailingicon">
+          <order />
+        </div>
         <div class="colview">
           <div class="tittle">{{ statData[0] }}</div>
           <div class="subtitle">Total Orders</div>
         </div>
-        <div class="trailingicon">
-          <order />
-        </div>
       </div>
 
       <div class="smallCard" style="width: 190px">
+       <div class="trailingicon">
+          <sweing />
+        </div>
         <div class="colview">
           <div class="tittle">{{ statData[1] }}</div>
           <div class="subtitle">Total Sewing</div>
         </div>
-        <div class="trailingicon">
-          <sweing />
-        </div>
       </div>
 
       <div class="smallCard" style="width: 190px">
+        <div class="trailingicon">
+          <cutting />
+        </div>
         <div class="colview">
           <div class="tittle">{{ statData[2] }}</div>
           <div class="subtitle">Total Cutting</div>
         </div>
-        <div class="trailingicon">
-          <cutting />
-        </div>
       </div>
 
       <div class="smallCard" style="width: 200px">
+        <div class="trailingicon">
+          <finishing />
+        </div>
         <div class="colview">
           <div class="tittle">{{ statData[3] }}</div>
           <div class="subtitle">Total Finishing</div>
-        </div>
-        <div class="trailingicon">
-          <finishing />
         </div>
       </div>
     </v-layout>
@@ -586,6 +586,7 @@ export default {
 .singleProduct .tittle {
   font-weight: bold;
   font-size: 14px;
+  margin-left: 20px;
 }
 .singleProduct .subtittle {
   font-weight: lighter;
@@ -695,11 +696,12 @@ export default {
   margin: 10px;
   margin-right: 20px;
   padding: 10px;
-  padding-left: 30px;
-  padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
   border-radius: 20px;
   display: flex;
   border: rgb(223, 216, 216) solid 1px;
+  background-color: rgb(146, 188, 230);
 }
 .nodata {
   width: 200px;
@@ -759,8 +761,8 @@ export default {
   text-overflow: ellipsis;
 }
 .trailingicon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin: auto;
 }
 /* .smallCard:hover .tittle {

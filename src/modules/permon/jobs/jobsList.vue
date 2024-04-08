@@ -67,7 +67,6 @@
         @click="attendnceChooser = true"
         >Initiate Attendance
       </v-btn>
-
       <v-btn
         class="text-capitalize white--text"
         style="margin-right: 20px"
@@ -514,7 +513,7 @@ export default {
       });
       this.setSearchResult(this.searchresult);
       // eslint-disable-next-line no-console
-      console.log(this.searchresult);
+      // console.log(this.searchresult);
     },
 
     async localfetchAllJobs() {

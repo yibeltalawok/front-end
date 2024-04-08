@@ -1,23 +1,20 @@
 <template>
+    <!-- clipped-left   -->
   <v-app-bar
     flat
     app
-    clipped-left
     clipped-right
     dense
-    style="border-bottom: 2px solid #f6f7f9; background-color: primary"
+    style="border-bottom: 1px solid #f6f7f9; background-color: primary"
   >
     <v-app-bar-nav-icon @click.stop="toggleNavBar" />
     <v-toolbar-title>
-      <img src="@/assets/astralogo.png" height="40px" width="70px" alt="alt" />
+      <img src="@/assets/abesha.png" class=" ml-4 mt-1" height="40px" width="55px" alt="alt" />
+      <span style="color:rgb(90, 168, 214);font-style: italic;">HABESHA</span>
     </v-toolbar-title>
-
     <v-spacer />
-    <search-field />
-
     <v-spacer></v-spacer>
-
-    <v-badge
+    <!-- <v-badge
       v-if="attendanceLists.length > 0"
       :content="attendanceLists.length"
       :value="9"
@@ -29,11 +26,11 @@
         class="iconclass"
         @click="$router.push({ name: 'attendance-settlement' })"
       />
-    </v-badge>
+    </v-badge> -->
 
-    <v-btn icon @click="$router.push({ name: 'dashboard' })">
+    <!-- <v-btn icon @click="$router.push({ name: 'dashboard' })">
       <v-icon>home</v-icon>
-    </v-btn>
+    </v-btn> -->
 
     <div class="text-center">
       <v-menu
@@ -81,15 +78,24 @@
       @change="toggleLanguage()"
       class="ml-4 mt-5"
     />
+   <!-- <select :input-value="currentLanguage === 'en'" class="ml-5 mt-2 text--accent-4" style=" padding:5px; margin-left:10px;color:rgb(123, 128, 131);" @change="toggleLanguage()">
+  <option value="am">አማርኛ</option>
+  <option value="en">english</option>
+  </select> -->
 
-    <v-switch
+    <!-- <v-switch
       label="Dark"
       color="primary"
       @change="darkmode()"
       class="ml-4 mt-5"
-    />
+    /> -->
+   <select color="primary" class="ml-5 mt-2 text--accent-4" style="margin-left:10px; color:rgb(123, 128, 131); padding:5px" @change="darkmode()">
+   <option value="light">light</option>
+   <option value="dark">dark</option>
+   </select>
+
     <v-btn icon @click="logout">
-      <Logout class="iconclass"/>
+      <img src="@/assets/icons/logout-8-256.png" class="ml-4 mr-5" height="20px" style=" margin-top:1px; " width="30px" alt="alt" />
     </v-btn>
 
     <!-- <v-menu bottom left transition="slide-x-transition" offset-y>
@@ -131,17 +137,18 @@
 import { mapMutations } from "vuex";
 import AccountService from "@/shared/services";
 import { api, path } from "@/api";
-import SearchField from "@/modules/SearchField.vue";
 import { mapActions, mapState } from "vuex";
-import contacts from "@/assets/icons/contacts_icon.svg";
+// import contacts from "@/assets/icons/contacts_icon.svg";
 import notification from "@/assets/icons/notification.svg"
 import arrowRight from "@/assets/icons/arrow-right.svg"
-import Logout from "@/assets/icons/logout_icon.svg"
+// import Logout from "/assets/icons/logout-8-256.png"
 
 export default {
   name: "NavBar",
   data() {
     return {
+      selectedLangue: '',
+      dropdownLangue: ['English', 'አማርኛ'],
       menu: false,
       msgCount: 0,
       user: AccountService.getProfile(),
@@ -150,11 +157,10 @@ export default {
     };
   },
   components: {
-    SearchField,
-    contacts,
+    // contacts,
     arrowRight,
     notification,
-    Logout
+    // Logout
   },
   async created() {
     //get number of messages
@@ -202,7 +208,7 @@ export default {
   width: 100%;
 }
 .listbtn:hover {
-  background-color: lightgray;
+  /* background-color: rgb(123, 128, 131);  */
   width: 100%;
 }
 
